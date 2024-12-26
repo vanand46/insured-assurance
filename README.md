@@ -7,3 +7,11 @@ An Application which is under development for end-to-end Insurace claim process
     Java version: 21.0.5
 ``
 
+# Build the project
+
+``nvm clean install``
+
+# Deploy the war file to a servlet container like Tomcat (copy target/*.war to Tomcat's webapps folder)
+
+# Start Tomcat and Access
+ - Access http://localhost:8080/insured-assurance/about-us
