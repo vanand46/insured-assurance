@@ -27,3 +27,15 @@ jobs:
 
       - name: Build the project with Maven
         run: mvn clean install -U
+
+      - name: SCP SSH Pipeline
+        uses: cross-the-world/ssh-scp-ssh-pipelines@latest
+        with:
+          host: ${{ secrets.JENKINS_HOST }}
+          user: ${{ secrets.JENKINS_USERNAME }}
+          pass: ${{ secrets.JENKINS_PASSWORD }}
+          port: ${{ secrets.JENKINS_PORT }}
+          scp: |
+            ./target/*.war => /tmp/
+          last_ssh: |
+            ls -lart /tmp
