@@ -11,7 +11,7 @@ An Application which is under development for end-to-end Insurace claim process
 
 ## Build the project
 
-``nvm clean install``
+``mvn clean install``
 
 ## Deploy
 
